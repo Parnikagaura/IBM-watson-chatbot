@@ -1,0 +1,1074 @@
+{
+  "intents": [
+    {
+      "intent": "contact",
+      "examples": [
+        {
+          "text": "contact details"
+        },
+        {
+          "text": "Contact number",
+          "mentions": [
+            {
+              "entity": "Contact",
+              "location": [
+                0,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "text": "how i can i contact you to make reservation"
+        },
+        {
+          "text": "please provide your number"
+        },
+        {
+          "text": "tell me your number?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Goodbye",
+      "examples": [
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "see you"
+        },
+        {
+          "text": "talk later"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "how are you?"
+        },
+        {
+          "text": "I'm also fine"
+        },
+        {
+          "text": "I'm also good"
+        },
+        {
+          "text": "Namaste"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Location_query",
+      "examples": [
+        {
+          "text": "Give me your location?"
+        },
+        {
+          "text": "how can i reach your cafe?"
+        },
+        {
+          "text": "location of the cafe?"
+        },
+        {
+          "text": "location please?"
+        },
+        {
+          "text": "where is noir brew?"
+        },
+        {
+          "text": "Where is your cafe?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Menu",
+      "examples": [
+        {
+          "text": "Can you tell me the food you have in your cafe"
+        },
+        {
+          "text": "menu"
+        },
+        {
+          "text": "Show me menu"
+        },
+        {
+          "text": "What do you have?"
+        },
+        {
+          "text": "What's the menu?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "How much time it will take to prepare a order?"
+        },
+        {
+          "text": "i want to order cappucciono"
+        },
+        {
+          "text": "I want to order coffee"
+        },
+        {
+          "text": "i want to order expresso"
+        },
+        {
+          "text": "i want to order latte"
+        },
+        {
+          "text": "i want to place cookies"
+        },
+        {
+          "text": "i want to place muffins"
+        },
+        {
+          "text": "i want to place pizza"
+        },
+        {
+          "text": "i would like to order drinks"
+        },
+        {
+          "text": "ORDER"
+        },
+        {
+          "text": "order status please?"
+        },
+        {
+          "text": "place order"
+        },
+        {
+          "text": "where is my order?"
+        },
+        {
+          "text": "YES, I WANT TO ORDER"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Reservation",
+      "examples": [
+        {
+          "text": "Can i make reservation?"
+        },
+        {
+          "text": "I want to book a table."
+        },
+        {
+          "text": "reservation for party available?"
+        },
+        {
+          "text": "reservation for the birthday?"
+        },
+        {
+          "text": "Reserve a table for 2."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Thanks",
+      "examples": [
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thanks for assisting"
+        },
+        {
+          "text": "thank you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Timing",
+      "examples": [
+        {
+          "text": "Are you open now?",
+          "mentions": [
+            {
+              "entity": "TIMING",
+              "location": [
+                8,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "text": "What are your opening hours?"
+        },
+        {
+          "text": "When do you open?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Contact",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Contact",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Email id",
+          "synonyms": [
+            "noirbrew@gmail.com"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "Mobile Number",
+          "patterns": [
+            "8762896870"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "drink_item",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "americano",
+          "synonyms": [
+            "black coffe"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cappucino",
+          "synonyms": [
+            "cappuciono"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cold brew",
+          "synonyms": [
+            "brew",
+            "iced coffe"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "espresso",
+          "synonyms": [
+            "strong coffee"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "juice",
+          "synonyms": [
+            "cranberry juice",
+            "guava juice",
+            "mojito",
+            "orange juice",
+            "strawberry juice",
+            "watermelon juice"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "latte",
+          "synonyms": [
+            "café latte",
+            "milk coffe"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Shakes",
+          "synonyms": [
+            "chocolate shake",
+            "kitkat shake",
+            "oreo shake",
+            "strawberry shake"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Show",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "What",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "What's",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "you",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "food_item",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cake",
+          "synonyms": [
+            "black forest cake",
+            "butterscotch cake",
+            "choco lava cake",
+            "strawberry cake"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Can",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "croissant",
+          "synonyms": [
+            "butter croissant",
+            "mini croissant"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "do",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "me",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Noodles",
+          "synonyms": [
+            "hakka noodle",
+            "noodles"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pizza",
+          "synonyms": [
+            "farmhouse pizza",
+            "Mini Margherita"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "the",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Location",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Delhi",
+          "synonyms": [
+            "Connaught Place",
+            "Greater Kailash",
+            "Hauz Khas",
+            "Janakpuri",
+            "Saket"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ghaziabad",
+          "synonyms": [
+            "Gandhi Nagar",
+            "Kavi Nagar",
+            "Rajanagar Extension",
+            "Rajnagar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Menu",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "What do you have?",
+          "synonyms": [
+            "what do you have in drinks?",
+            "What do you have in food?"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "people",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": [
+            "just me",
+            "one"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": [
+            "couple",
+            "two"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": [
+            "group",
+            "three"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": [
+            " four",
+            "group"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "5",
+          "synonyms": [
+            "five",
+            "group"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "group",
+          "synonyms": [
+            "group"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "RESERVATION",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Can i make reservation?",
+          "synonyms": [
+            "how can i make reservation",
+            "i want to make reservation",
+            "i want to make reservation for tommorrow"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-currency",
+      "values": []
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "sys-percentage",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "TIMING",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "At what time are you open?",
+          "synonyms": [
+            "cafe close time",
+            "cafe open time",
+            "can you tell me your timing",
+            "for how many hours are you open"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "open",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1754065426578",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1754065426585",
+      "previous_sibling": "handler_8_1754065426585"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1754065437171",
+      "event_name": "input",
+      "dialog_node": "handler_10_1754065437177"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_5_1754065482752",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1754065482759",
+      "previous_sibling": "handler_6_1754065482759"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_7_1754061723810",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1754065410747"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_3_1754062594492",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1754065426181"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_6_1754062660844",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1754065436769"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_2_1754065446957",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1754065446967",
+      "previous_sibling": "handler_7_1754065446967"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_4_1753376403407",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1754065446492"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1754065437171",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1754065437177",
+      "previous_sibling": "handler_10_1754065437177"
+    },
+    {
+      "type": "event_handler",
+      "parent": "Welcome",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1754065456466"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1754065456974",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1754065456980",
+      "previous_sibling": "handler_7_1754065456980"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1753375526548",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1754065465303"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1754065482752",
+      "context": {
+        "Location": "@Location"
+      },
+      "conditions": "@Location",
+      "event_name": "input",
+      "dialog_node": "handler_6_1754065482759"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1754065491071",
+      "context": {
+        "Contact": "@Contact"
+      },
+      "conditions": "@Contact",
+      "event_name": "input",
+      "dialog_node": "handler_6_1754065491079"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1754065446957",
+      "context": {
+        "RESERVATION": "@RESERVATION"
+      },
+      "conditions": "@RESERVATION",
+      "event_name": "input",
+      "dialog_node": "handler_7_1754065446967"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_6_1754065456974",
+      "event_name": "input",
+      "dialog_node": "handler_7_1754065456980"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_4_1753375840395",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1754065473805"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_7_1754065491071",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1754065491079",
+      "previous_sibling": "handler_6_1754065491079"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_9_1754065426578",
+      "event_name": "input",
+      "dialog_node": "handler_8_1754065426585"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1754065465734",
+      "context": {
+        "Greetings": "#Greetings"
+      },
+      "conditions": "#Greetings",
+      "event_name": "input",
+      "dialog_node": "handler_8_1754065465740"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_1_1753376049820",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1754065482312"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_10_1754065465734",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1754065465740",
+      "previous_sibling": "handler_8_1754065465740"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_7_1753376320159",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1754065490682"
+    },
+    {
+      "type": "frame",
+      "title": "LOCATION",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We’re nestled right in the heart of Connaught Place, New Delhi.\n\n"
+              },
+              {
+                "text": "\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#Location_query",
+      "dialog_node": "node_1_1753376049820",
+      "previous_sibling": "node_4_1753375840395"
+    },
+    {
+      "type": "frame",
+      "title": "Thanks ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You're welcome! Let me know if you need anything else.\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#Thanks",
+      "dialog_node": "node_3_1754062594492",
+      "previous_sibling": "node_7_1754061723810"
+    },
+    {
+      "type": "frame",
+      "title": "MENU",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here’s our menu:\n☕ Drinks: Latte, Cappuccino, Espresso, Cold Brew, Americano\n🍽️ Snacks: Croissant, Muffins, Sandwiches, Cookies\nWould you like to place an order?\n\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Menu",
+      "dialog_node": "node_4_1753375840395",
+      "previous_sibling": "node_6_1753375526548"
+    },
+    {
+      "type": "frame",
+      "title": "RESERVATION",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you! 📅 Your reservation request has been noted. You’ll receive a confirmation shortly at your mobile number. Looking forward to brewing something special for you at Noir Brew Café ☕✨\n\n"
+              },
+              {
+                "text": "At what time?"
+              },
+              {
+                "text": "For how many people?"
+              },
+              {
+                "text": "Great! I've reserved a table for  {{@people}} at {{@sys-time}}. See you soon at Noir Brew Café!\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Reservation",
+      "dialog_node": "node_4_1753376403407",
+      "previous_sibling": "node_7_1753376320159"
+    },
+    {
+      "type": "frame",
+      "title": "GREETINGS",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello there! 👋 I’m your virtual assistant at Noir Brew Café. Whether you’re looking for the boldest brew or a cozy corner, I’ve got you covered. What would you like to explore today?\n\n"
+              },
+              {
+                "text": "I'm Good. What about you?"
+              },
+              {
+                "text": "Glad to hear!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Greetings",
+      "dialog_node": "node_6_1753375526548",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "frame",
+      "title": "goodbye",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Goodbye! Hope to serve you soon at Noir Brew Café.\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#Goodbye",
+      "dialog_node": "node_6_1754062660844",
+      "previous_sibling": "node_3_1754062594492"
+    },
+    {
+      "type": "standard",
+      "title": "ORDER",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Place your order."
+              },
+              {
+                "text": "Okay sure! Placing your order."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#order",
+      "dialog_node": "node_6_1754068088056",
+      "previous_sibling": "node_1_1753376049820"
+    },
+    {
+      "type": "frame",
+      "title": "CONTACT",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can contact us at 012035-67327"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#contact && @Contact",
+      "dialog_node": "node_7_1753376320159",
+      "previous_sibling": "node_6_1754068088056"
+    },
+    {
+      "type": "frame",
+      "title": "TIMING",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We're open daily from 9:00 AM to 9:00 PM.\n\n"
+              },
+              {
+                "text": "You are welcome to visit us at your convenience time."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#Timing",
+      "dialog_node": "node_7_1754061723810",
+      "previous_sibling": "node_4_1753376403407"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1753375526548",
+      "variable": "$Greetings",
+      "dialog_node": "slot_10_1754065465734",
+      "previous_sibling": "handler_6_1754065465303"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1754062660844",
+      "dialog_node": "slot_2_1754065437171",
+      "previous_sibling": "handler_3_1754065436769"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1753376403407",
+      "variable": "$RESERVATION",
+      "dialog_node": "slot_2_1754065446957",
+      "previous_sibling": "handler_4_1754065446492"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1753376049820",
+      "variable": "$Location",
+      "dialog_node": "slot_5_1754065482752",
+      "previous_sibling": "handler_8_1754065482312"
+    },
+    {
+      "type": "slot",
+      "parent": "Welcome",
+      "dialog_node": "slot_6_1754065456974",
+      "previous_sibling": "handler_5_1754065456466"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1753376320159",
+      "variable": "$Contact",
+      "dialog_node": "slot_7_1754065491071",
+      "previous_sibling": "handler_9_1754065490682"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1754062594492",
+      "dialog_node": "slot_9_1754065426578",
+      "previous_sibling": "handler_2_1754065426181"
+    },
+    {
+      "type": "frame",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome to Noir Brew — where flavor meets mood. I’m your virtual assistant, ready to pore over your cravings. Need a menu, a seat, or a suggestion?\n\n"
+              },
+              {
+                "text": "\n☕ Welcome to Noir Brew Café! How can I help you today?\n\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "nlp": {
+      "model": "latest"
+    },
+    "disambiguation": {
+      "enabled": true,
+      "randomize": true,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above."
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "language": "en",
+  "description": "created for assistant 800aa843-0d7a-4fcb-b5c5-5da5db63a911",
+  "name": "Noir Brew Bot-dialog"
+}
