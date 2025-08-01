@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noir Brew Café</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(145deg, #fff5e1, #ffe2c5);
+      color: #3e2c23;
+    }
+
+    header {
+      background-color: #3e2c23;
+      color: white;
+      padding: 15px 30px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      background: repeating-linear-gradient(
+        45deg,
+        #fdf3e7,
+        #fdf3e7 20px,
+        #f6d6a7 20px,
+        #f6d6a7 40px
+      );
+      padding: 80px 20px;
+      font-size: 24px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 50px 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #3e2c23;
+      padding-bottom: 10px;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background: #fff7ed;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .menu-item::before {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .coffee::before { content: "☕"; }
+    .croissant::before { content: "🥐"; }
+    .pizza::before { content: "🍕"; }
+    .cake::before { content: "🍰"; }
+    .juice::before { content: "🧃"; }
+
+    .chat-container {
+      background: #fff7ef;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #chat-box {
+      height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+
+    #user-input {
+      width: 60%;
+      padding: 8px;
+    }
+
+    button {
+      padding: 8px 14px;
+      background-color: #3e2c23;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    button:hover {
+      background-color: #5a3f2c;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #3e2c23;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <h1>Noir Brew Café</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#chat">Chatbot</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Noir Brew</h2>
+    <p>☕ 🥐 🍕 🍰 Where every bite & sip tells a story 🍰 🍕 🥐 ☕</p>
+  </section>
+
+  <section id="about">
+    <h3>About Us</h3>
+    <p>Noir Brew Café brings you the finest brews and bakes, served with cozy vibes and a sprinkle of love. Whether it's a chat over cappuccino or a quick pastry break — we’re here for it.</p>
+  </section>
+
+  <section id="menu">
+    <h3>Our Signature Menu</h3>
+    <div class="menu">
+      <div class="menu-item coffee">Espresso</div>
+      <div class="menu-item croissant">Butter Croissant</div>
+      <div class="menu-item pizza">Mini Margherita</div>
+      <div class="menu-item cake">Choco Lava Cake</div>
+      <div class="menu-item juice">Fresh Orange Juice</div>
+    </div>
+  </section>
+
+  <section id="chat">
+    <h3>Talk to Our Bot</h3>
+    <div class="chat-container">
+      <div id="chat-box"></div>
+      <input type="text" id="user-input" placeholder="Ask about menu, hours..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Noir Brew Café. All rights reserved.</p>
+  </footer>
+
+  <script>
+    async function sendMessage() {
+      const inputField = document.getElementById("user-input");
+      const userText = inputField.value;
+      appendMessage("You", userText);
+      inputField.value = "";
+
+      const response = await fetch("/message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userText }),
+      });
+
+      const data = await response.json();
+      appendMessage("Bot", data.reply);
+    }
+
+    function appendMessage(sender, text) {
+      const chatBox = document.getElementById("chat-box");
+      chatBox.innerHTML += `<p><strong>${sender}:</strong> ${text}</p>`;
+    }
+  </script>
+</body>
+</html>
