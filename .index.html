@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noir Brew Café</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>Noir Brew Café</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#chat">Chatbot</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Noir Brew</h2>
+    <p>Where every cup tells a story ☕</p>
+  </section>
+
+  <section id="about">
+    <h3>About Us</h3>
+    <p>Noir Brew Café is your cozy, go-to place for handcrafted coffee, gourmet snacks, and meaningful conversations. We brew magic in every cup, served with warmth and love.</p>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h3>Our Signature Menu</h3>
+    <div class="menu-gallery">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1587731098440-2ba55b27c13e" alt="Espresso">
+        <p>Espresso</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Cappuccino">
+        <p>Cappuccino</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1523610892361-1eda107521fa" alt="Cold Brew">
+        <p>Cold Brew</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1572441710528-47dffb9f69c5" alt="Matcha Latte">
+        <p>Matcha Latte</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1605478125482-5e83e4c7e8f5" alt="Pastries">
+        <p>Pastries & Sandwiches</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chat" class="chatbot-section">
+    <h3>Chat with Our Bot</h3>
+    <div class="chat-container">
+      <div id="chat-box"></div>
+      <input type="text" id="user-input" placeholder="Ask me anything..." />
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="startListening()">🎤 Voice</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <form method="POST" action="#">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Noir Brew Café. All rights reserved.</p>
+  </footer>
+
+  <script>
+    async function sendMessage() {
+      const inputField = document.getElementById("user-input");
+      const userText = inputField.value;
+      appendMessage("You", userText);
+      inputField.value = "";
+
+      const response = await fetch("/message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userText }),
+      });
+
+      const data = await response.json();
+      appendMessage("Bot", data.reply);
+      speakText(data.reply);
+    }
+
+    function appendMessage(sender, text) {
+      const chatBox = document.getElementById("chat-box");
+      chatBox.innerHTML += `<p><strong>${sender}:</strong> ${text}</p>`;
+    }
+
+    function startListening() {
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = 'en-US';
+      recognition.start();
+
+      recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript;
+        document.getElementById("user-input").value = transcript;
+        sendMessage();
+      };
+    }
+
+    function speakText(text) {
+      const synth = window.speechSynthesis;
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-US';
+      synth.speak(utter);
+    }
+  </script>
+</body>
+</html>
+
+  
+  
+
