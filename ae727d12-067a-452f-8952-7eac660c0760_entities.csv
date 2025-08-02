@@ -1,0 +1,35 @@
+Contact,Contact
+Contact,Email id,noirbrew@gmail.com
+Contact,Mobile Number,/8762896870/
+drink_item,latte,milk coffe,café latte
+drink_item,cappucino,cappuciono
+drink_item,What's
+drink_item,What
+drink_item,you
+drink_item,Show
+drink_item,Shakes,chocolate shake,kitkat shake,oreo shake,strawberry shake
+drink_item,juice,orange juice,mojito,cranberry juice,strawberry juice,watermelon juice,guava juice
+drink_item,americano,black coffe
+drink_item,cold brew,iced coffe,brew
+drink_item,espresso,strong coffee
+food_item,me
+food_item,do
+food_item,the
+food_item,cake,choco lava cake,strawberry cake,butterscotch cake,black forest cake
+food_item,pizza,Mini Margherita,farmhouse pizza
+food_item,Noodles,hakka noodle,noodles
+food_item,croissant,butter croissant,mini croissant
+food_item,Can
+greetings
+Location,Delhi,Janakpuri,Greater Kailash,Connaught Place,Hauz Khas,Saket
+Location,Ghaziabad,Rajanagar Extension,Rajnagar,Kavi Nagar,Gandhi Nagar
+Menu,What do you have?,What do you have in food?,what do you have in drinks?
+people,1,one,just me
+people,5,five,group
+people,3,three,group
+people,2,two,couple
+people,4, four,group
+people,group,group
+RESERVATION,Can i make reservation?,how can i make reservation,i want to make reservation,i want to make reservation for tommorrow
+TIMING,open
+TIMING,At what time are you open?,can you tell me your timing,cafe open time,cafe close time,for how many hours are you open
