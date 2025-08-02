@@ -1,0 +1,52 @@
+tell me your number?,contact
+Contact number,contact
+please provide your number,contact
+how i can i contact you to make reservation,contact
+contact details,contact
+Bye,Goodbye
+see you,Goodbye
+talk later,Goodbye
+good bye,Goodbye
+Hi,Greetings
+Namaste,Greetings
+how are you?,Greetings
+I'm also good,Greetings
+I'm also fine,Greetings
+Hey,Greetings
+Hello,Greetings
+location please?,Location_query
+Give me your location?,Location_query
+how can i reach your cafe?,Location_query
+location of the cafe?,Location_query
+Where is your cafe?,Location_query
+where is noir brew?,Location_query
+What's the menu?,Menu
+menu,Menu
+What do you have?,Menu
+Show me menu,Menu
+Can you tell me the food you have in your cafe,Menu
+i want to place pizza,order
+i want to place muffins,order
+i want to place cookies,order
+where is my order?,order
+How much time it will take to prepare a order?,order
+order status please?,order
+place order,order
+i want to order latte,order
+ORDER,order
+i want to order cappucciono,order
+i want to order expresso,order
+i would like to order drinks,order
+"YES, I WANT TO ORDER",order
+I want to order coffee,order
+Reserve a table for 2.,Reservation
+I want to book a table.,Reservation
+Can i make reservation?,Reservation
+reservation for party available?,Reservation
+reservation for the birthday?,Reservation
+thanks for assisting,Thanks
+thank you,Thanks
+thanks,Thanks
+When do you open?,Timing
+Are you open now?,Timing
+What are your opening hours?,Timing
